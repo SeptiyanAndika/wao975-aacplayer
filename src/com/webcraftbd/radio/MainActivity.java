@@ -1,10 +1,3 @@
-/* 
- * Developed By: Mohammad Zakaria Chowdhury
- * Company: Webcraft Bangladesh
- * Email: zakaria.cse@gmail.com
- * Website: http://www.webcraftbd.com
- */
-
 package com.webcraftbd.radio;
 
 import java.net.URL;
