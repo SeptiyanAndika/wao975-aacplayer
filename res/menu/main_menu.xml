@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:id="@+id/menuGroup">
+        <item android:id="@+id/exit" android:title="@string/menu_exit" android:icon="@drawable/menu_exit"></item>
+    </group>
+</menu> 

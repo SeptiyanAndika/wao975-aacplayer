@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_buffering">Cargando...</string>
+    <string name="status_ready">Listo</string>
+    <string name="status_playing">Reproduciendo</string>
+    <string name="status_paused">Pausado</string>
+    <string name="status_stopped">Detenido</string>
+    <string name="status_error">Error al reproducir</string>
+    <string name="status_noconnection">No hay conexion</string>
+</resources>
