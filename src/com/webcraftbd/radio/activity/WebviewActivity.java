@@ -1,4 +1,4 @@
-package com.webcraftbd.radio;
+package com.webcraftbd.radio.activity;
 
 import android.app.Activity;
 import android.os.Bundle;

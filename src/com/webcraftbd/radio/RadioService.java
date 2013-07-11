@@ -30,6 +30,7 @@ import android.util.Log;
 import com.spoledge.aacdecoder.MultiPlayer;
 import com.spoledge.aacdecoder.PlayerCallback;
 import com.wao975.aacplayer.R;
+import com.webcraftbd.radio.activity.MainActivity;
 
 public class RadioService extends Service implements OnErrorListener, OnCompletionListener, OnPreparedListener, OnInfoListener {
 	private static String app_name;
@@ -270,7 +271,7 @@ public class RadioService extends Service implements OnErrorListener, OnCompleti
 	}
 	
 	public void stop() {
-
+		Log.d("test test", "stop() called!");
 		timeCounter = -1;
 		resetMetadata();
 		isPrepared = false;
@@ -440,7 +441,7 @@ public class RadioService extends Service implements OnErrorListener, OnCompleti
 	
 	/* Allowing activity to access all methods of RadioService */
 	public class RadioBinder extends Binder {
-		RadioService getService() {
+		public RadioService getService() {
 			return RadioService.this;
 		}
 	}
@@ -500,7 +501,7 @@ public class RadioService extends Service implements OnErrorListener, OnCompleti
 	
 	
 	
-	protected class MetadataTask extends AsyncTask<URL, Void, RadioMetadata> 
+	public class MetadataTask extends AsyncTask<URL, Void, RadioMetadata> 
     {
 		private URL stream_url;
         @Override
@@ -604,7 +605,7 @@ public class RadioService extends Service implements OnErrorListener, OnCompleti
 	
 	public void resetMetadata() {
 		artist = "WAO 97.5 FM";
-		track = "La Revoluci—n de la Radio";
+		track = "La Revoluciï¿½n de la Radio";
 		pre_artist = "";
 		pre_track = "";
 		clearAlbum();

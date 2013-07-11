@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import com.wao975.aacplayer.R;
+import com.webcraftbd.radio.activity.AboutActivity;
+import com.webcraftbd.radio.activity.FacebookActivity;
+import com.webcraftbd.radio.activity.MainActivity;
+import com.webcraftbd.radio.activity.TwitterActivity;
 
 public class TabContainer extends TabActivity {
 

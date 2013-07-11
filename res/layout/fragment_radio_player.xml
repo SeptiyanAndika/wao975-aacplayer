@@ -1,0 +1,198 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:orientation="vertical"
+   >
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="380dp" >
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:minWidth="255dp"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/titleTextView"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#555555" />
+
+            <ImageView
+                android:id="@+id/stationImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/statusTextView"
+                android:layout_below="@+id/trackTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/artistTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/stationImageView"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:gravity="left"
+                android:text="Artist"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/trackTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/stationImageView"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="55dp"
+                android:gravity="left"
+                android:text="Current Playing Track"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/albumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/artistTextView"
+                android:layout_alignBottom="@+id/artistTextView"
+                android:layout_alignRight="@+id/stationImageView"
+                android:gravity="right"
+                android:text="Album"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/trackTextView"
+                android:layout_alignBottom="@+id/trackTextView"
+                android:layout_alignRight="@+id/stationImageView"
+                android:gravity="right"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/PlayButton"
+                android:layout_centerHorizontal="true"
+                android:text="@string/status_noconnection"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/PauseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/titleTextView"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/btn_pause"
+               />
+
+            <Button
+                android:id="@+id/PlayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/titleTextView"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/btn_play"
+                 />
+
+            <Button
+                android:id="@+id/StopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/titleTextView"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/btn_stop"
+              />
+
+            <Button
+                android:id="@+id/NextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:layout_toLeftOf="@+id/StopButton"
+                android:background="@drawable/btn_next"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/PreviousButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@+id/PlayButton"
+                android:background="@drawable/btn_previous"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/sinvolumen" />
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/seek_handler"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/convolumen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center_horizontal"
+            android:minHeight="50dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

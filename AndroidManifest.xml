@@ -18,21 +18,23 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.webcraftbd.radio.MainActivity"
+            
+            android:name="com.webcraftbd.radio.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.webcraftbd.radio.TabContainer"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.webcraftbd.radio.TabContainer"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+        >
+            
         </activity>
 
         <service
@@ -40,19 +42,19 @@
             android:enabled="true" />
 
         <activity
-            android:name="com.webcraftbd.radio.FacebookActivity"
+            android:name="com.webcraftbd.radio.activity.FacebookActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@android:style/Theme.Black" >
+             >
         </activity>
         <activity
-            android:name="com.webcraftbd.radio.TwitterActivity"
+            android:name="com.webcraftbd.radio.activity.TwitterActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@android:style/Theme.Black" >
+ >
         </activity>
         <activity
-            android:name="com.webcraftbd.radio.AboutActivity"
+            android:name="com.webcraftbd.radio.activity.AboutActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
+    >
         </activity>
         <activity
             android:name="com.google.ads.AdActivity"
